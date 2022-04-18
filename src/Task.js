@@ -1,14 +1,24 @@
 import './App.css';
-
-function Box({complete, number, text}) {
-  const textStyle = complete ? {textDecoration: 'line-through'} : {textDecoration: 'none'}
+import {useState} from 'react';
 
 
-  return <div className='task'>
-    <input type="checkbox" checked={complete}/>
-    <span>{number}.</span>
-    <p style={textStyle}>{text}</p>
-  </div>
+function Counter() {
+
+    const [count, setCount] = useState('❌')
+
+    const check = () => {
+        if(count === '✔️'){
+          setCount('❌')
+        } else {
+          setCount('✔️')
+        }
+    }
+
+    return(
+        <div className='box'> 
+          <span onClick={check}>{count}</span>  
+        </div>
+    );
 }
 
-export default Box;
+export default Counter;
