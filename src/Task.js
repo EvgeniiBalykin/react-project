@@ -1,6 +1,6 @@
 import './App.css';
 
-function Box({complete, number, text}) {
+function Task({complete, number, text}) {
   const textStyle = complete ? {textDecoration: 'line-through'} : {textDecoration: 'none'}
 
 
@@ -11,4 +11,4 @@ function Box({complete, number, text}) {
   </div>
 }
 
-export default Box;
+export default Task;
