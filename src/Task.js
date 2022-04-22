@@ -1,24 +1,22 @@
 import './App.css';
-import {useState} from 'react';
+import { MdRepeat, MdRepeatOne } from "react-icons/md";
+import React, { useState }  from 'react';
 
 
-function Counter() {
+function MuseButton() {
 
-    const [count, setCount] = useState('❌')
+  const [state, setState] = useState(0);
+  const repeatArr = [
+    <MdRepeat color="grey" size="5em" />,
+    <MdRepeat color="#3667f7" size="5em"/>,
+    <MdRepeatOne color="#3667f7" size="5em"/>
+  ];
 
-    const check = () => {
-        if(count === '✔️'){
-          setCount('❌')
-        } else {
-          setCount('✔️')
-        }
-    }
+  const onMdRepeatClick = () => {
+    state >= 2 ? setState(0) : setState(state + 1)
+  };
 
-    return(
-        <div className='box'> 
-          <span onClick={check}>{count}</span>  
-        </div>
-    );
+    return <button onClick={onMdRepeatClick}>{repeatArr[state]}</button>;
 }
 
-export default Counter;
+export default MuseButton;
