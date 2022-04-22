@@ -1,0 +1,23 @@
+.box {
+   display: flex;
+   flex-direction: column-reverse;
+   gap: 20px;
+}
+
+button{
+   width: 50px;
+}
+
+span {
+   width: 350px;
+}
+
+ .italic-off {
+   position: relative;
+   cursor: pointer;
+ } 
+
+ .italic-on {
+   background-color: gray;
+   cursor: pointer;
+ }
