@@ -3,45 +3,38 @@ import React, {useState} from 'react';
 
 function Game() {
 
-  const [count, setCount] = useState(0);
+  const [, setCount] = useState(0);
 
-  function getRandomPosition(max) {
-     return Math.floor(Math.random(10) * max);
+  const getRandomInt = (min, max) => {
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
   }
 
-  const position = getRandomPosition(800)
-
-  function getRandomColor(max) {
-    return Math.floor(Math.random(400) * max);
+  function getRandomColor() {
+    let x= getRandomInt(0, 255);
+    let y = getRandomInt(0, 255);
+    let z = getRandomInt(0, 255);
+    return `rgb(${x},${y},${z})`
   }
 
-  const color = getRandomColor(600)
+  const top = getRandomInt(0, 900) + 'px'
+  const left = getRandomInt(0, 900) + 'px'
 
+  const color = getRandomColor()
   const styles = {
-    background: 'rgb' + '(' + 370 + ',' + color + ',' + position + ')',
-    width: '50px',
-    height: '50px', 
-    border: '2px solid red',
-    borderRadius: '50%',
-    position: 'absolute',
-    top: color + 'px',
-    left: position + 'px'
+    background: color,
+    top: top,
+    left: left
   }
+
 
   const tap = () => {
-    setCount(position)
-
-    if (styles.right) {
-      styles.left = styles.right
-    } else {
-      styles.right = styles.left
-    }
+    setCount(styles)
   }
 
-
-
-  console.log(styles.background)
-  return <div style={styles} onClick={tap}></div>
+  return <div className='game-container'>
+    <div className='ball' style={styles} onClick={tap}></div>
+    </div>
 }
 
 export default Game;
