@@ -2,7 +2,7 @@ import './App.css';
 import {useState} from 'react';
 
 
-function Counter() {
+function Toggle() {
 
     const [count, setCount] = useState('❌')
 
@@ -21,4 +21,4 @@ function Counter() {
     );
 }
 
-export default Counter;
+export default Toggle;
