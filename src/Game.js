@@ -3,7 +3,9 @@ import React, {useState} from 'react';
 
 function Game() {
 
-  const [, setCount] = useState(0);
+  const [color, setColor] = useState('');
+  const [top, setTop] = useState('')
+  const [left, setLeft] = useState('')
 
   const getRandomInt = (min, max) => {
     const rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -17,19 +19,20 @@ function Game() {
     return `rgb(${x},${y},${z})`
   }
 
-  const top = getRandomInt(0, 900) + 'px'
-  const left = getRandomInt(0, 900) + 'px'
-  const color = getRandomColor()
-  
+  const topInt = getRandomInt(0, 800) + 'px'
+  const leftInt = getRandomInt(0, 800) + 'px'
+  const colorInt = getRandomColor()
+
   const styles = {
     background: color,
     top: top,
     left: left
   }
 
-
   const tap = () => {
-    setCount(styles)
+    setColor(colorInt)
+    setLeft(leftInt)
+    setTop(topInt)
   }
 
   return <div className='game-container'>
