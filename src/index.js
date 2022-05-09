@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Counter from './Task';
+import SayHi from './SayHi';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Counter/>
+    <SayHi/>
   </React.StrictMode>
 );
 
