@@ -1,0 +1,25 @@
+img {
+   width: 200px;
+   height: 200px;
+}
+
+.title {
+   font-size: 15px;
+   text-align: start;
+   width: 200px;
+}
+
+.photos{
+   height: 600px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.buttons{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+   gap: 10px;
+}
