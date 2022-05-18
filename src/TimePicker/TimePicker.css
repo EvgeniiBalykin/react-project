@@ -1,0 +1,47 @@
+.container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.time{
+   display: flex;
+   gap: 15px;
+   font-size: 80px;
+   color: rgb(122, 0, 221);
+}
+
+.btn-time{
+   display: flex;
+   gap: 10px;
+}
+
+.btn-time > div {
+   display: flex;
+   gap: 5px;
+}
+
+button {
+   color: white;
+   background-color:rgb(122, 0, 221);
+   font-size: 30px;
+   border: none;
+   border-radius: 50px;
+   width: 60px;
+   height: 60px;
+   align-items: center;
+   justify-content: center;
+}
+
+button:hover{
+   background-color: #fff;
+   box-shadow: 0 0 5px 5px rgb(216, 213, 213);
+   color: rgb(122, 0, 221);
+   transition: all cubic-bezier();
+}
+
+button:active {
+   background-color: rgb(216, 213, 213);
+}
