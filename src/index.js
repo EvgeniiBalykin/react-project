@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import TimePicker from './TimePicker';
+import TimePicker from './TimePicker/TimePicker';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
